@@ -66,7 +66,7 @@ Login/
 
 1. **Clonar el repositorio**
 ```bash
-   git clone https://github.com/gitgaby/saul-login-tasks.git
+   git clone https://github.com/Git-gaby/Actividad-de-Registro-e-inicio-de-sesi-n
 ```
 
 2. **Navegar al directorio**
