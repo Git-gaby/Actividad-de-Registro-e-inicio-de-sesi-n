@@ -1,0 +1,33 @@
+/* Este archivo es ahora MÍNIMO, solo para las clases que JS necesita alternar */
+
+/* Estilo para tarea completada (no se puede hacer solo con Tailwind, se necesita CSS puro o JIT) */
+.completada span {
+    text-decoration: line-through;
+    color: #888;
+    font-style: italic;
+}
+
+/* GRADIENTES DE BOTONES (Usando colores definidos en tailwind.config del index.html) */
+.delete-btn {
+    /* Tailwind classes: bg-gradient-to-r from-delete-start via-delete-mid to-delete-end */
+    /* Se aplica con CSS directo para asegurar el gradiente */
+    background: linear-gradient(90deg, var(--delete-start) 0%, var(--delete-mid) 50%, var(--delete-end) 100%);
+    color: white; /* Asegurar el color del icono */
+}
+
+.edit-btn {
+    /* Tailwind classes: bg-gradient-to-r from-edit-start via-edit-mid to-edit-end */
+    /* Se aplica con CSS directo para asegurar el gradiente */
+    background: linear-gradient(90deg, var(--edit-start) 0%, var(--edit-mid) 50%, var(--edit-end) 100%);
+    color: white; /* Asegurar el color del icono */
+}
+
+/* Definición de variables CSS para usar los colores del config de Tailwind, ¡solo si es necesario para el gradiente! */
+:root {
+    --delete-start: #833AB4;
+    --delete-mid: #fd1d1d;
+    --delete-end: #fcb045;
+    --edit-start: #2A7B9B;
+    --edit-mid: #57c785;
+    --edit-end: #eddd53;
+}

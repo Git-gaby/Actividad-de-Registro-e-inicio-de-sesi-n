@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mini CRUD - Lista de Tareas Mejorada con Tailwind</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="agenda.css">
+    <script src="agenda.js" defer></script>
+    <script>
+        // Configuración de Tailwind para usar colores y transiciones custom
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'blue-custom': '#0077cc',
+                        'blue-hover': '#005aa3',
+                        'edit-start': '#2A7B9B',
+                        'edit-mid': '#57c785',
+                        'edit-end': '#eddd53',
+                        'delete-start': '#833AB4',
+                        'delete-mid': '#fd1d1d',
+                        'delete-end': '#fcb045',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="styles.css"> <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="font-sans text-center bg-gray-100 p-8">
+    <h1 class="text-4xl text-blue-custom mb-6">📋 Mi Lista de Tareas</h1>
+    <div class="max-w-lg mx-auto flex space-x-2">
+        <input type="text" id="tarea" placeholder="Escribe una tarea..." class="p-3 text-base w-full border border-gray-300 rounded-lg focus:ring-blue-custom focus:border-blue-custom">
+        <button class="add-btn bg-blue-custom hover:bg-blue-hover text-white p-3 rounded-lg transition duration-200 ease-in-out" onclick="agregarTarea()">Agregar</button>
+    </div>
+    
+    <ul id="lista" class="list-none p-0 max-w-2xl mx-auto mt-4"></ul>
+</body>
+</html>
